@@ -56,6 +56,7 @@
             numberOfPages:0,
             goBar:false,
             pageCounter:true,
+            hasPagination:true,
         };
 
         var filterSettings = {
@@ -148,7 +149,6 @@
         var setOptions = function(options){
             if(options.numberPerPage != settings.numberPerPage){
                 setNumberPerPage(options.numberPerPage);
-                console.log(options);
             }
 
             if(typeof options.goBar === 'boolean')
@@ -280,12 +280,15 @@
             settings.numberOfPages = pageCount;
 
             if (pageCount > 1) {
+                settings.hasPagination = true;
                 for ($i = $j,$ii = 0; $i < rowCount; $i++, $ii++)
                     tr[$ii] = table.rows[$i].outerHTML;
                 // Contenedor de los botones "paginate_controls"
                 table.insertAdjacentHTML("afterend","<div id='buttons' class='paginate paginate_controls'></div");
                 // Inicializando la tabla en la pagina 1
                 _lignePaginate.sort(1);
+            }else{
+                settings.hasPagination = false;
             }
         };
 
@@ -314,16 +317,16 @@
          * paginacion
          **/
         _lignePaginate.filter = function() {
-            setNumberPerPage(9999);
-            _lignePaginate.sort(1);
-
+            if(settings.hasPagination){
+                setNumberPerPage(9999);
+                _lignePaginate.sort(1);
+                hiddenPaginateControls();
+            }
             const filter = document.querySelector(filterSettings.el).value.toUpperCase();
             const trs = document.querySelectorAll( settings.el + ' tr:not(.header)');
             trs.forEach(tr => tr.style.display = [...tr.children].find(td => td.innerHTML.toUpperCase().includes(filter)) ? '' : 'none');
 
-            hiddenPaginateControls();
-
-            if(filter.length == 0){
+            if(filter.length == 0 && settings.hasPagination){
                 setNumberPerPage(_lignePaginate.getConstNumberPerPage());
                 _lignePaginate.sort(1);
                 showPaginatecontrols();
