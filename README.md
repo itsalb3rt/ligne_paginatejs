@@ -1,5 +1,9 @@
-Librería ligera en vanilla javascript para crear paginación y filtros sobre tablas.
+# Ligne PaginateJs
+Librería ligera en vanilla javascript para crear paginación y filtros sobre tablas HTML.
 Con unas configuraciones mínimas puedes tener una paginación increíble.
+
+- Sin Frameworks
+- Sin dependencias
 
 ### DEMO
 
@@ -17,7 +21,7 @@ Opcionalmente puedes agregar una hoja de estilos que hará que tu paginación lu
 ```html
 <link rel="stylesheet" href="css/paginate.css">
 ```
-
+---
 Una vez incluido en tu proyecto puedes indicar el selector de tu tabla el cual puede ser una `clase` o un `id` ambos son validos.
 
 ```javascript
