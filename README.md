@@ -3,7 +3,7 @@ Con unas configuraciones mínimas puedes tener una paginación increíble.
 
 ### DEMO
 
-
+## https://itsalb3rt.github.io/ligne_paginatejs/
 
 ### Uso basico
 
