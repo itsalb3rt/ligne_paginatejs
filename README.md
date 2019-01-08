@@ -7,7 +7,18 @@ Con unas configuraciones mínimas puedes tener una paginación increíble.
 
 ### Uso basico
 
-Puedes indicar que es una `clase` o un `id` ambos son validos.
+Descarga del directorio `js` el archivo `paginate.js` y agregalo a tu proyecto con las etiqueta `script`
+
+```html
+<script type="text/javascript" src="js/paginate.js"></script>
+```
+Opcionalmente puedes agregar una hoja de estilos que hará que tu paginación luzca fenomenal, esta hoja esta en el directorio `css` llamada `paginate.css`
+
+```html
+<link rel="stylesheet" href="css/paginate.css">
+```
+
+Una vez incluido en tu proyecto puedes indicar el selector de tu tabla el cual puede ser una `clase` o un `id` ambos son validos.
 
 ```javascript
 paginate.init('.myTable');
@@ -21,9 +32,9 @@ paginate.init('.myTable');
 
 Puedes establecer algunas opciones en el segundo parámetro como son;
 
--         **numberPerPage: **Cantidad de filas por pagina
--         **goBar:** Barra donde puedes digitar el numero de la pagina al que quiere ir
--         **pageCounter:** Contador de paginas, en cual estas, de cuantas paginas
+- **numberPerPage:** Cantidad de filas por pagina
+- **goBar:** Barra donde puedes digitar el numero de la pagina al que quiere ir
+- **pageCounter:** Contador de paginas, en cual estas, de cuantas paginas
 
 Te recomiendo crees una variable para establecer estas opciones;
 
