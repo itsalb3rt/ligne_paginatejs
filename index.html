@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Paginatejs | Ligne</title>
     <link rel="stylesheet" href="css/paginate.css">
     <link rel="stylesheet" href="css/ligne.css">
     <script type="text/javascript" src="js/paginate.js"></script>
+
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -1243,7 +1249,7 @@
         el:'#searchBox' //Caja de texto para filtrar, puede ser una clase o un ID
     };
 
-    paginate.init('.myTable',options,filterOptions);
+    paginate.init('.myTable');
 </script>
 </body>
 </html>
