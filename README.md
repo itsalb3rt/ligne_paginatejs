@@ -26,7 +26,7 @@ paginate.init('.myTable');
 
 **Resultado;**
 
-[![](https://i.imgur.com/v5vfjPZ.png)](https://i.imgur.com/v5vfjPZ.png)
+[![](https://i.imgur.com/ykzd7Lu.png)](https://i.imgur.com/ykzd7Lu.png)
 
 ### Opciones
 
@@ -50,7 +50,7 @@ paginate.init('.myTable',options);
 
 **Resultado;**
 
-[![](https://i.imgur.com/CPRiiN2.png)](https://i.imgur.com/CPRiiN2.png)
+[![](https://i.imgur.com/crlUHrS.png)](https://i.imgur.com/crlUHrS.png)
 
 ### Filtrar
 
